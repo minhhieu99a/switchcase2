@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap switch case if 2</title>
+</head>
+<body>
+<input type="text" id="sothang">
+<button onclick="tinhsongay()">Tính số ngày</button>
+<p id="songay">Số ngày của tháng bạn chọn </p>
+<script>
+    function tinhsongay() {
+        let thang = Number(document.getElementById("sothang").value);
+        switch (thang){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById("songay").innerText="Tháng bạn chọn có 31 ngày";
+                break;
+            case 2:
+                document.getElementById("songay").innerText="Tháng bạn chọn có 28 hoặc 29 ngày";
+                break;
+            default:
+                document.getElementById("songay").innerText="Tháng bạn chọn có 30 ngày";
+        }
+    }
+</script>
+</body>
+</html>
